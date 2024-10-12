@@ -1,0 +1,165 @@
+@use "./partials/colours" as *;
+@use "./partials/media-queries" as *;
+
+.form {
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+
+  &-label {
+    font-weight: 600;
+  }
+
+  &-input {
+    background-color: $white;
+    height: 2.25rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    border: 1px solid $cloud;
+    border-radius: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    color: $instock-black;
+    font-family: Titillium Web;
+
+    &::placeholder {
+      font-family: Titillium Web;
+      color: $instock-black;
+    }
+
+    @include tablet {
+      height: 2.375rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  &-input--add {
+    &::placeholder {
+      color: $slate;
+    }
+  }
+
+  &-input--edit {
+    &::placeholder {
+      color: $instock-black;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 0;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    margin: 1.5rem 0;
+
+    @include tablet {
+      margin: 2rem 0 0;
+      gap: 1.5rem;
+    }
+  }
+
+  &--wh,
+  &--contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 0;
+
+    @include tablet {
+      padding: 0 2rem;
+      margin: 1.5rem 0 2rem;
+    }
+    @include desktop {
+      padding: 0 2.5rem;
+    }
+  }
+
+  &--wh {
+    border-bottom: 1px solid $cloud;
+
+    @include tablet {
+      border-bottom: none;
+      border-right: 1px solid $cloud;
+      padding-right: 2rem;
+    }
+
+    @include desktop {
+      padding-right: 2.5rem;
+    }
+  }
+
+  &--contact {
+    @include tablet {
+      padding-left: 2rem;
+    }
+
+    @include desktop {
+      padding-left: 2.5rem;
+    }
+  }
+
+  &-cta-container {
+    background-color: rgba(247, 248, 249, 0.7);
+    height: 4.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    @include tablet {
+      padding: 0 2rem;
+      justify-content: flex-end;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.input-wrp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.input-error {
+  border: 1px solid $red;
+}
+
+.error {
+  color: $red;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding-left: 0.25rem;
+
+  &-wrp {
+    position: absolute;
+    top: calc(100%);
+
+    display: flex;
+    align-items: center;
+  }
+  &-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}

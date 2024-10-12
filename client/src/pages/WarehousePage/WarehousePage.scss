@@ -1,0 +1,36 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/media-queries" as *;
+
+.warehouse-page {
+
+    &__container {
+        position: relative;
+        top: -4rem;
+        margin: auto;
+        width: calc(100% - 2rem);
+        background-color: $white;
+        border-radius: 4px;
+    
+        @include tablet {
+        top: -6rem;
+        width: calc(100% - 4rem);
+        max-width: 63.75rem;
+        }
+    }
+
+    // Class to show only on mobile
+  &__mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // Class to hide on mobile
+  &__non-mobile {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}  

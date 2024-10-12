@@ -1,0 +1,21 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/media-queries" as *;
+
+.inventorydetails-page {
+
+    &__container {
+        position: relative;
+        top: -4rem;
+        margin: auto;
+        width: calc(100% - 2rem);
+        background-color: $white;
+        box-shadow: 0px 0px 10px rgba(19, 24, 44, 0.1);
+        border-radius: 4px;
+
+        @include tablet {
+            top: -6rem;
+            width: calc(100% - 4rem);
+            max-width: 63.75rem;
+        }
+    }
+}

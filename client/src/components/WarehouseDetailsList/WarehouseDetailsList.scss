@@ -1,0 +1,152 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/media-queries";
+@import "../../styles/partials/fonts";
+
+.warehousedetails-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        background-color: $light-grey;
+
+        &-column {
+            display: flex;
+        }
+
+    }
+
+    &__chevron {
+        width: 1rem;
+        height: auto;
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+
+    &__actions-row {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: space-between;
+    }
+
+
+    & img {
+        width: 1.5rem;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $cloud;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+
+        &:hover {
+            background-color: $light-grey;
+        }
+
+        &-container {
+            display: flex;
+            width: 20%;
+        }
+
+        &-name,
+        &-category {
+            font-size: 0.815rem;
+            width: 14%;
+        }
+
+        &-quantity {
+            font-size: 0.815rem;
+            width: 11%;
+        }
+
+        &-stock {
+            width: 15%;
+            font-size: 0.815rem;
+        }
+
+        &-container {
+            display: flex;
+            width: 20%;
+        }
+
+        &-name,
+        &-category {
+            font-size: 0.815rem;
+            width: 14%;
+        }
+
+        &-quantity {
+            font-size: 0.815rem;
+            width: 11%;
+        }
+
+        &-stock {
+            width: 15%;
+            font-size: 0.815rem;
+        }
+
+        &-container {
+            display: flex;
+            width: 21%;
+            align-items: center;
+            min-width: 9rem;
+            color: $slate;
+            align-content: center;
+            padding-top: 0.25rem;
+        }
+    
+        &-name {
+            display: flex;
+            font-weight: 600;
+            min-width: min-content;
+            white-space: nowrap;
+            align-items: center;
+            color: $instock-indigo;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        &-quantity {
+            display: flex;
+            font-weight: 600;
+            min-width: min-content;
+            white-space: nowrap;
+            align-items: center;
+            color: $instock-indigo;
+            cursor: pointer;
+            width: 10%
+        }
+
+        &-stock {
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50rem;
+            font-weight: 600;
+            font-size: 0.815rem;
+            padding: 0.25rem 0.5rem;
+            line-height: 1rem;
+        }
+
+        &-stock--in-stock {
+            background-color: rgba(21, 132, 99, 0.07);
+            color: $green;
+        }
+
+        &-stock--out-of-stock {
+            background-color: rgba(251, 42, 41, 0.07);
+            color: $red;
+        }
+
+
+    }
+}

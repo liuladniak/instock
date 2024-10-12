@@ -1,0 +1,32 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/media-queries" as *;
+
+.form-textarea {
+  font-family: Titillium Web;
+  background-color: $white;
+  min-height: 7.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  border: 1px solid $cloud;
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+  color: $instock-black;
+
+  &::placeholder {
+    color: $slate;
+  }
+
+  @include tablet {
+    min-height: 7.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.radio-buttons {
+  display: flex;
+
+  @include tablet {
+    gap: 2.5rem;
+  }
+}

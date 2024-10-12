@@ -1,0 +1,116 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/media-queries";
+@import "../../styles/partials/fonts";
+
+.warehouse-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        background-color: $light-grey;
+
+        &-column {
+            display: flex;
+        }
+
+        &-title {
+            color: $slate;
+            font-size: 1rem;
+            align-content: center;
+            padding-top: 0.25rem;
+            font-weight: 600;
+
+            &--first {
+                width: auto;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+    }
+
+    &_chevron {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+
+    &__actions-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+
+        @include tablet {
+            justify-content: flex-end; 
+        }
+    }
+
+    & img {
+        width: 1.5rem;
+        cursor: pointer;
+        flex-shrink: 0; 
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        border-bottom: 1px solid $cloud;
+        padding: 0.75rem 1rem;
+
+        &:hover {
+            background-color: $light-grey;
+        }
+
+        &-container {
+            display: flex;
+            align-items: center;
+            width: 14%;
+            min-width: 10rem; 
+        }
+
+        &-name,
+        &-address,
+        &-contact-name,
+        &-contact-info {
+            font-size: 0.815rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-name {
+            font-weight: 600;
+            color: $instock-indigo;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        &-address {
+            width: 12%;
+            margin-left: 3rem;
+        }
+
+        &-contact-name {
+            width: 22%;
+            margin-left: 4rem;
+        }
+
+        &-contact-info {
+            width: 28%;
+            padding-right: 2rem;
+        }
+    }
+}
